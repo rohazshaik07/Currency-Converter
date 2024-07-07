@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="converter">
+            <h1>Currency Converter</h1>
+            <div class="imag_result">
+                <img src="Images/currency_image.jpg" alt="" class="image_last"/>
+            </div>
+            <div class="currency">
+                <div class="currency-box">
+                    <div class="section">
+                        <p>CURRENCY I HAVE</p>
+                        <p class="date" id="date"></p>  
+                    </div>
+                    <div class="input-group">
+                        <img id="from-flag" src="https://flagcdn.com/32x24/us.png" alt="From Country Flag">
+                        <select id="from-currency" onchange="updateFlag('from')"> </select>
+                        <input type="number" id="amount"  placeholder="Enter you currency" oninput="convertCurrency()">
+                    </div>
+                </div>
+                <button id="switch" onclick="switchCurrencies()">Switch Currencies</button>
+                <div class="currency-box">
+                    <p>CURRENCY I WANT</p>
+                    <div class="output-group">
+                        <img id="to-flag" src="https://flagcdn.com/32x24/in.png" alt="To Country Flag">
+                        <select id="to-currency" onchange="updateFlag('to')"></select>
+                        <div id="result" ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="final_result">
+                <p class="Resultt" id="result_final"></p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
